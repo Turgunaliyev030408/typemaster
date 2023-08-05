@@ -1,0 +1,242 @@
+/* barlow-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/barlow-v12-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/barlow-v12-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/barlow-v12-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+  --orange-color: #f16728;
+  --orange-color-light: #ff9b62;
+  --dark-blue-color: #162542;
+  --dark-blue-light-color: #7b8bad;
+  --space-color: #e8eff2;
+  --white-color: #ffffff;
+
+  --h1-fs: 5.6rem;
+  --h1-lh: 1;
+
+  --h2-fs: 3.2rem;
+  --h2-lh: 1.125;
+
+  --h3-fs: 2.4rem;
+  --h3-lh: 1.116;
+
+  --body-fs: 1.6rem;
+  --body-lh: 1.62;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 2px dotted var(--dark-blue-light-color);
+  outline-offset: 4px;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  display: flex;
+  object-fit: cover;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: "Barlow", sans-serif;
+  font-size: var(--body-fs);
+  line-height: var(--body-lh);
+  color: var(--dark-blue-light-color);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 900;
+  color: var(--dark-blue-color);
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: var(--h1-fs);
+  line-height: var(--h1-lh);
+}
+
+h2 {
+  font-size: var(--h2-fs);
+  line-height: var(--h2-lh);
+}
+
+h3 {
+  font-size: var(--h3-fs);
+  line-height: var(--h3-lh);
+}
+
+.container {
+  width: 100%;
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.btn {
+  border-radius: 8px;
+  padding: 1.6rem 2.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  transition: 0.5s;
+}
+
+.btn-orange {
+  color: var(--white-color);
+  background-color: var(--orange-color);
+}
+
+.btn-orange:hover {
+  background-color: var(--orange-color-light);
+}
+
+.btn-space {
+  color: var(--dark-blue-color);
+  background-color: var(--space-color);
+}
+
+.btn-space:hover {
+  color: var(--white-color);
+  background-color: var(--dark-blue-color);
+}
+
+.header {
+}
+.header__container {
+  padding-top: 6.4rem;
+  padding-bottom: 6.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site__logo:hover {
+  opacity: 0.8;
+}
+
+.site__logo:active {
+  opacity: 0.6;
+}
+
+.site-logo__image {
+}
+
+main {
+  flex-grow: 1;
+}
+
+.hero {
+  padding-top: 2.8rem;
+  position: relative;
+}
+.hero__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero__content {
+  max-width: 445;
+  width: 100%;
+}
+.hero__title {
+  margin-bottom: 2.4rem;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.hero__description {
+  margin-bottom: 4rem;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+.buttons {
+  display: flex;
+}
+
+.hero__btn__outline {
+  color: var(--dark-blue-light-color);
+}
+
+.hero__image__wrapper {
+}
+
+.hero__image {
+  border-radius: 20px;
+  width: 100%;
+  max-width: 540;
+  height: 450;
+}
+
+@media screen and (max-width: 900px) {
+  .hero__container {
+    flex-direction: column;
+  }
+
+  .hero__image {
+    border-radius: 20px;
+    width: 100%;
+    max-width: 540;
+    height: 450;
+    padding-top: 6.4rem;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 507px) {
+  .header__container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .btn-space {
+    padding: 1.1rem 1.4rem;
+  }
+}
